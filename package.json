@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+      "test": "test"
+  },
+  "scripts": {
+      "build": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/base/build.css",
+      "watch": "npx tailwindcss --postcss -i ./postcss/base.css -o ./css/base/build.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+      "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+      "@tailwindcss/forms": "^0.4.0",
+      "jquery-validation": "^1.19.3"
+  }
+}

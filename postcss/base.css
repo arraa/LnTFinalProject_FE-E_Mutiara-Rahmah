@@ -1,0 +1,15 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+/* @import "./components/navbar.css"; */
+/* @import "./utilities/colors.css"; */
+/* @import "./page1.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+textarea:focus, input:focus{
+    outline: none;
+}

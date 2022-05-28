@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuddingFest</title>
+    <link rel="shortcut icon" href="./assets/puddingfest-icon.svg" type="image/x-icon">
+     <!-- css -->
+     <link rel="stylesheet" href="./css/base/build.css" />
+     <link rel="stylesheet" href="./css/style.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body class="bg-slate-700 text-white h-screen">
+     <!-- Navbar for Web -->
+ <nav class="hidden fixed top-0 lg:flex items-center justify-between px-20 py-10 bg-slate-700 z-30 w-full" id="web-nav">
+    <a href="#"><img src="./assets/puddingfest-logo.svg" alt=""></a>
+    <ul class="flex space-x-16">
+       <li><a href="./home.html">home</a></li>
+       <li><a href="./event.html">event</a></li>
+       <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+
+ </nav>
+
+ <!-- hero -->
+
+ <section class="pt-32">
+     <div class="w-full flex justify-between items-end px-8 mb-5">
+         <div  class="text-[7.5rem] font-bold">
+             PuddingFest
+         </div>
+         <div class="bg-white h-[8rem] mb-4 w-1"></div>
+         <div> 
+             <ul id="slider" class="m-auto w-[335px] h-[250px] p-1 relative">
+                <li class="list-none absolute"><img class="h-56" src="./assets/hero1.jpg" alt=""></li>
+                <li class="list-none absolute"><img src= "https://picsum.photos/id/1023/335/250" ></li>
+                <li class="list-none absolute"><img src= "https://picsum.photos/id/2/335/250" ></li>
+                <li class="list-none absolute"><img src= "https://picsum.photos/id/3/335/250" ></li>
+                <li class="list-none absolute"><img src= "https://picsum.photos/id/4/335/250" ></li>
+                <li class="list-none absolute"><img src= "https://picsum.photos/id/5/335/250" ></li>
+            </ul>
+         </div>
+     </div>
+     <div class="w-full flex justify-between items-center px-14 mb-5">
+         <div>
+             <img class="h-64"  src="./assets/hero2.jpg" alt="">
+         </div>
+         <div class="w-[50%] h-full">
+             <div class="text-left ">
+                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus vitae dolorem reprehenderit qui consectetur 
+                 exercitationem minima, dolorum vero est odio distinctio ab atque facilis eos, obcaecati illum asperiores sapiente, 
+                 repellat molestias ullam! Quos, ullam eaque odio vel voluptatibus tempore architecto.
+             </div>
+             <div class="h-full flex flex-col  justify-between items-end">
+                 <div class="my-5 h-[2px] w-[80%] bg-white "></div>
+                 <div class="text-right text-xl mb-10">
+                     our sponsor
+                 </div>
+                 <div class="flex h-10 ">
+                    <a href=""><img class="h-10" src="./assets/sponsor1.svg" alt=""></a>
+                    <a href=""><img class="h-10 mx-10" src="./assets/sponsor2.svg" alt=""></a>
+                    <a href=""><img class="h-10" src="./assets/sponsor3.svg" alt=""></a> 
+                   
+                   
+                   
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+<!-- modals-->
+<div class="bg-black/30 modals  w-full h-full fixed top-0 z-50 overflow-y-scroll hidden">
+    <div class=" z-0 absolute top-0 left-0 w-full h-full "></div>
+    <div class="flex  justify-center w-full form-card mt-20 relative ">
+        <div class="bg-slate-400 flex flex-col justify-center sm:px-10 sm:py-8 px-4 py-4 lg:w-1/2 w-[85%] sm:h-27 sm:rounded-1.75rem rounded-2xl shadow-bsInput">
+            <div class="btn-close w-full flex justify-end">
+                <img class="sm:h-full h-4"  src="https://img.icons8.com/ios-glyphs/30/ffffff/multiply.png" alt="">
+            </div>
+            <div class="sm:my-5 lg:px-16 px-10 mb-3 w-full relative">
+                    <div class="text-center text-4xl font-bold tracking-wide">
+                        Registration
+                    </div>
+                    <!-- form -->
+                    <form action=""class="w-full">
+                        <div class="sm:mb-2">
+                            <div>
+                                <label class="font-PJSSemiBold text-cGray sm:text-base text-[10px]" for="name" >Name</label>
+                            </div>
+                            <div for="name" class=" sm:mt-2 mt-1 sm:mb-4 flex items-center  sm:rounded-lg rounded-md bg-white  remove">
+                                <span class="sm:px-3 px-2 absolute">
+                                    <img class="sm:h-full h-3" src="./assets/name-form.svg" alt="" />
+                                </span>
+                                <div for="name" class="absolute text-cGray lg:left-[6.75rem]  sm:left-[5.25rem] left-[2.80rem] sm:text-base text-[12px] focusshow hidden">|</div>
+                                <input class="input sm:pl-12 pl-7  py-1 w-full sm:h-[3.5rem] sm:text-base text-[9px] sm:rounded-lg rounded-md bg-transparent font-PJSMedium text-cBlack transition-all delay-20 "
+                                ="name" type="text" name="name" placeholder="please type your name here..." />
+                            </div>
+
+                            <p for="name" class="error-msg  text-red-500 sm:text-sm text-[8px] w-full mt-1 "></p>
+                         </div>
+
+                        <div class="sm:mb-2 ">
+                            <div>
+                                <label for="email" class="font-PJSSemiBold  sm:text-base text-[10px]">Email</label>
+                            </div>
+                            <div class="sm:mt-2 mt-1 flex items-center  sm:rounded-lg rounded-md bg-white remove">
+                                 <span class="px-2 absolute">
+                                <img class="sm:h-4 h-2" src="./assets/email-form.svg" alt="" />
+                                </span>
+                                <input class= " text-gray-700 input sm:pl-12 pl-7 py-1  w-full sm:h-[3.5rem] sm:text-base text-[9px] sm:rounded-lg rounded-md bg-transparent transition-all delay-20 "
+                                type="email" name="email" placeholder="please type your email here.." />
+                            </div>
+
+                            <p for="email" class="error-msg text-red-500 sm:text-sm text-[8px] w-full mt-1"></p>
+                        </div>
+
+
+                        <div class="mb-2">
+                            <div>
+                                <label for="whatsapp" class="font-PJSSemiBold text-cGray sm:text-base text-[10px]">Number Phone</label>
+                            </div>
+                            <div for="whatsapp" class="sm:mt-2 mt-1 sm:mb-4 flex items-center  sm:rounded-lg rounded-md bg-white remove">
+                                <span  class="sm:px-3 px-2 absolute">
+                                    <img class="sm:h-full h-3" src="./assets/whatsapp.svg" alt="" />
+                                </span>
+
+                                <div for="whatsapp" class="absolute text-cGray lg:left-[6.75rem] sm:left-[5.25rem] left-[2.80rem] sm:text-base text-[12px] focusshow hidden ">|</div>
+                                <input class="text-gray-700 input sm:pl-12 pl-7 py-1  w-full sm:h-[3.5rem] sm:text-base text-[9px] sm:rounded-lg rounded-md bg-transparent transition-all delay-20 "
+                                    id="whatsapp" type="tel" name="whatsapp" placeholder="please type ypur number here..." />
+
+                            </div>
+                            <p for="whatsapp" class="error-msg text-red-500 sm:text-sm text-[8px] w-full mt-1"></p>
+                        </div>
+
+
+                        <div class="w-full">
+                            <div class="w-full ">
+                                <div>
+                                    <label for="event" class="font-PJSSemiBold text-cGray sm:text-base text-[10px]">Event</label>
+                                </div>
+                                <select name="event" id="event" class="sm:rounded-lg rounded-md sm:h-[3.5rem] form-select appearance-none block w-full px-3  py-1.5 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300  transition   ease-in-out  m-0
+                                focus:text-gray-700 focus:bg-white  focus:outline-none">
+                                    <option value="default" class="text-gray-400">choose our Event</option>
+                                    <option value="1">Webinar</option>
+                                    <option value="2">Workshop</option>
+                                    <option value="3">Hackathon</option>
+                                </select>
+
+                                <p for="event" class="error-msg text-red-500 sm:text-sm text-[8px] w-full mt-1"></p>
+                            </div>
+                        </div>
+                     </form> 
+            </div>
+
+            <button type="submit" class="cursor-pointer bg-white block mx-auto sm:mt-10 mb-5 text-slate-400 sm:text-lg text-[10px] sm:rounded-2xl rounded-md shadow-md sm:px-10 sm:py-3 px-2 py-1 text-cWhite drop-shadow-2xl tracking-wide">
+                Submit
+            </button>  
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/home.js"></script>
+
+</body>
+</html>

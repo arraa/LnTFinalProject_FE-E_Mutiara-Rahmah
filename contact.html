@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuddingFest</title>
+    <link rel="shortcut icon" href="./assets/puddingfest-icon.svg" type="image/x-icon">
+     <!-- css -->
+     <link rel="stylesheet" href="./css/base/build.css" />
+     <link rel="stylesheet" href="./css/style.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body class="bg-slate-700 text-white h-screen">
+     <!-- Navbar for Web -->
+ <nav class="hidden fixed top-0 lg:flex items-center justify-between px-20 py-10 bg-slate-700 z-30 w-full" id="web-nav">
+    <a href="#"><img src="./assets/puddingfest-logo.svg" alt=""></a>
+    <ul class="flex space-x-16">
+       <li><a href="./home.html">home</a></li>
+       <li><a href="./event.html">event</a></li>
+       <li><a href="./contact.html">Contact Us</a></li>
+    </ul>
+
+ </nav>
+
+
+    <section class="pt-[7.5rem] relative">
+        <div class="">
+            <div class="bg-slate-500 flex items-center justify-between px-28 pb-24">
+                <div>
+                    <div class="text-[3rem] my-7">
+                        Get in touch
+                    </div>
+                    <div>
+                        Lorem, ipsum dolor sit amet consectetur <br> adipisicing elit. Eaque, unde?
+                    </div>
+                </div>
+                <div>
+                    <img class="h-96" src="./assets/contact-us.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="absolute -bottom-[8rem] flex justify-between w-full px-20 h-52">
+            <div class="flex flex-col items-center bg-slate-200 text-slate-600 p-8 text-center h-full">
+                <div class="">
+                    talk to contact person
+                </div>
+                <div class="mt-4 pb-6">
+                    If you have some questions about our events, please let us know <br> with the whatsapp
+                </div>
+                <div class="flex justify-between items-center w-[80%]">
+                    <div class="text-slate-400">
+                       +000 123 2344 1222
+                    </div>
+                    <a class=" bg-slate-600 text-white px-6 py-2 rounded-lg" href="https://api.whatsapp.com/send?phone=628888888&text=hello" target="_blank">Whatsapp</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center bg-slate-200 text-slate-600 p-8 text-center h-full">
+                <div class="">
+                    Ask us
+                </div>
+                <div class="mt-4 pb-6">
+                    If you have some questions about our events, please let us know <br> with the email
+                </div>
+                <div class="flex justify-between items-center w-[80%]">
+                    <div class="text-slate-400">
+                        PuddingFest@gmail.com
+                     </div>
+                     <a class=" bg-slate-600 text-white px-6 py-2 rounded-lg" href="mailto:PuddingFest@gmail.com"target="_blank">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
