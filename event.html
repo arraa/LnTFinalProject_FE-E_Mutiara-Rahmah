@@ -13,6 +13,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <script async src="https://ga.jspm.io/npm:es-module-shims@1.4.3/dist/es-module-shims.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 </head>
 <body class="bg-slate-700 text-white ">
      <!-- Navbar for Web -->
@@ -227,7 +228,7 @@
 </section>
 
 <!-- modals-->
-<div class="modals bg-black/30 modals  w-full h-full fixed top-0 z-50 overflow-y-scroll flex  justify-center items-center hidden">
+<div class="modals bg-black/30 modals  w-full h-full fixed top-0 z-50 overflow-y-scroll flex  justify-center items-center ">
     <div class=" z-0 absolute top-0 left-0 w-full h-full "></div>
     <div class="flex  justify-center items-center w-full form-card relative h-full">
         <div class="bg-slate-400 flex flex-col justify-center sm:px-10 sm:py-8 px-4 py-4 lg:w-1/2 w-[85%] sm:h-27 sm:rounded-1.75rem rounded-2xl shadow-bsInput">
@@ -239,7 +240,7 @@
                         Registration
                     </div>
                     <!-- form -->
-                    <form action="" class="w-full" id="form">
+                    <form action="submit" class="w-full" id="form">
                         <div class="sm:mb-2">
                             <div>
                                 <label class="font-PJSSemiBold text-cGray sm:text-base text-[10px]" for="name" >Name</label>
@@ -250,7 +251,7 @@
                                 </span>
                                 <div for="name" class="absolute text-cGray lg:left-[6.75rem]  sm:left-[5.25rem] left-[2.80rem] sm:text-base text-[12px] focusshow hidden">|</div>
                                 <input class="input sm:pl-12 pl-7  py-1 w-full sm:h-[3.5rem] sm:text-base text-[9px] sm:rounded-lg rounded-md bg-transparent font-PJSMedium text-cBlack transition-all delay-20 "
-                                ="name" type="text" name="name" placeholder="please type your name here..." />
+                                id="name" type="text" name="name" placeholder="please type your name here..." />
                             </div>
 
                             <p for="name" class="error-msg  text-red-500 sm:text-sm text-[8px] w-full mt-1 "></p>
@@ -264,7 +265,7 @@
                                  <span class="px-2 absolute">
                                 <img class="sm:h-4 h-2" src="./assets/email-form.svg" alt="" />
                                 </span>
-                                <input class= " text-gray-700 input sm:pl-12 pl-7 py-1  w-full sm:h-[3.5rem] sm:text-base text-[9px] sm:rounded-lg rounded-md bg-transparent transition-all delay-20 "
+                                <input class= " text-gray-700 input sm:pl-12 pl-7 py-1  w-full sm:h-[3.5rem] sm:text-base text-[9px] sm:rounded-lg rounded-md bg-transparent transition-all delay-20 " id="email"
                                 type="email" name="email" placeholder="please type your email here.." />
                             </div>
 
@@ -295,7 +296,7 @@
                                 <div>
                                     <label for="event" class="font-PJSSemiBold text-cGray sm:text-base text-[10px]">Event</label>
                                 </div>
-                                <select name="event" id="event" class="sm:rounded-lg rounded-md sm:h-[3.5rem] form-select appearance-none block w-full px-3  py-1.5 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300  transition   ease-in-out  m-0
+                                <select name="event"  id="event" class="sm:rounded-lg rounded-md sm:h-[3.5rem] form-select appearance-none block w-full px-3  py-1.5 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300  transition   ease-in-out  m-0
                                 focus:text-gray-700 focus:bg-white  focus:outline-none">
                                     <option value="default" class="text-gray-400">choose our Event</option>
                                     <option value="1">Webinar</option>
@@ -319,5 +320,6 @@
 
 </div>
  <script src="./js/script.js"></script>
+
 </body>
 </html>

@@ -1,3 +1,56 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyBz4auEIVXKW7bDjt1dqdkVOKNKupCHvdQ",
+    authDomain: "final-project-574dd.firebaseapp.com",
+    databaseURL: "https://final-project-574dd-default-rtdb.firebaseio.com",
+    projectId: "final-project-574dd",
+    storageBucket: "final-project-574dd.appspot.com",
+    messagingSenderId: "290732395507",
+    appId: "1:290732395507:web:435cb145a2173ccb8ae086",
+    measurementId: "G-J07NES8MXV"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  let database = firebase.database().ref("Register");
+
+  
+  
+  $( "#btn-submit" ).click(function() {
+    $( "#form" ).submit();
+});
+
+$("#form").submit(function (e) {
+    e.preventDefault();
+    var name = $('#name').val();    
+    var email = $('#email').val();
+    var whatsapp = $('#whatsapp').val();    
+    var event = $('#event').find(":selected").text();
+    console.log(event)
+
+
+    let newRegister = database.push();
+    newRegister.set({
+      name: name,
+      email: email,
+      number: whatsapp,
+      event:event,
+    });
+    jsonObject = {
+        name: '',
+        email: '',
+        number: '',
+        event:'',
+      };
+    
+      jsonObject. name= name,
+      jsonObject.email = email;
+      jsonObject.number = whatsapp;
+      jsonObject.event = event;
+    
+      $.post("http://localhost:3000/register", jsonObject, function () {
+        alert("your register is success!! thankyou for your registration");
+      });
+});
+
 
 $('#webinar-btn').click(function(){
     $("#webinar").removeClass('hidden')
@@ -159,28 +212,4 @@ $(document).ready(function () {
         },  
         });
     });
-});
-
-// $('#btn-submit').click( function() {
-//     $.post( 'https://jsonplaceholder.typicode.com/posts', $('form#form').serialize(), function(data) {
-//          // ... do something with response from server
-//        },
-//        'json' // I expect a JSON response
-//     );
-// });
-
-// $('#btn-submit').click( function() {
-//     $.ajax({
-//         url: 'https://jsonplaceholder.typicode.com/posts',
-//         type: 'post',
-//         dataType: 'json',
-//         data: $('form#form').serialize(),
-//         success: function(data) {
-//                    // ... do something with the data...
-//                  }
-//     });
-// });
-
-$( "#btn-submit" ).click(function() {
-    $( "#form" ).submit();
 });
