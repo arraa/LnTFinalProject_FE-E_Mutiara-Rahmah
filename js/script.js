@@ -19,7 +19,7 @@ const firebaseConfig = {
 });
 
 $("#form").submit(function (e) {
-    e.preventDefault();
+    
     var name = $('#name').val();    
     var email = $('#email').val();
     var whatsapp = $('#whatsapp').val();    
@@ -34,21 +34,20 @@ $("#form").submit(function (e) {
       number: whatsapp,
       event:event,
     });
-    jsonObject = {
-        name: '',
-        email: '',
-        number: '',
-        event:'',
-      };
+    // jsonObject = {
+    //     name: '',
+    //     email: '',
+    //     number: '',
+    //     event:'',
+    //   };
     
-      jsonObject. name= name,
-      jsonObject.email = email;
-      jsonObject.number = whatsapp;
-      jsonObject.event = event;
-    
-      $.post("http://localhost:3000/register", jsonObject, function () {
-        alert("your register is success!! thankyou for your registration");
-      });
+    //   jsonObject. name= name,
+    //   jsonObject.email = email;
+    //   jsonObject.number = whatsapp;
+    //   jsonObject.event = event;
+    //   $.post("http://localhost:3000/register", jsonObject, function () {
+    //     alert("your register is success!! thankyou for your registration");
+    //   });
 });
 
 
@@ -209,7 +208,11 @@ $(document).ready(function () {
             var name = $(label).attr("for");
             console.log('Success ',name)
 
-        },  
+        }, 
+        submitHandler: function(form) {
+            alert("your register is success!! thankyou for your registration");
+            window.location.reload();
+        } 
         });
     });
 });
